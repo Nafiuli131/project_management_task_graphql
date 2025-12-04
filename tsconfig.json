@@ -1,0 +1,54 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    // --- Required settings for TypeGraphQL ---
+    // Enable decorator features:
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    // Module System and Target: 
+    // Uses the CommonJS module standard for TypeGraphQL and Node.js projects.
+    "target": "es2020",
+    "module": "commonjs", // Using CommonJS as advised by your guide
+    // File Layout (Specify Source and Output folders):
+    "rootDir": "./src",
+    "outDir": "./dist",
+    // --- Recommended settings for Node.js and Quality Control ---
+    // Add Type Definitions: Required for the Node.js environment
+    "types": [
+      "node"
+    ],
+    // Set 'lib' according to the 'target'
+    "lib": [
+      "es2020"
+    ],
+    // Other Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    // Recommended Options (Maintain Strictest Type Checking)
+    "strict": true,
+    "skipLibCheck": true,
+    // Stricter Typechecking Options (Optional, keep as needed)
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": false,
+    // Style Options (Generally good practice to uncomment these)
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    // The following lines are often unnecessary for TypeGraphQL/Node CommonJS projects and have been removed from the final list:
+    /*
+    "module": "nodenext", 
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    */
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "cdk"
+  ]
+}
